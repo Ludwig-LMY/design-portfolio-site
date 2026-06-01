@@ -10,21 +10,31 @@ type ProjectMediaProps = {
   project: Project;
   className: string;
   mode: "card" | "detail" | "archive";
-  previewActive?: boolean;
 };
 
 export function ProjectMedia({
   project,
   className,
   mode,
-  previewActive = false,
 }: ProjectMediaProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const imageSrc = withBasePath(project.image);
   const videoSrc = project.videoSlug
     ? withBasePath(`/media/${project.videoSlug}.mp4`)
     : null;
-  const shouldRenderVideo = Boolean(videoSrc) && (mode === "card" ? previewActive : isPlaying);
+  const shouldRenderVideo = Boolean(videoSrc) && mode !== "card" && isPlaying;
+
+  if (mode === "card") {
+    return (
+      <Image
+        src={imageSrc}
+        alt={project.name}
+        width={1200}
+        height={900}
+        className={className}
+      />
+    );
+  }
 
   if (project.videoSlug && (mode === "archive" || mode === "detail") && !isPlaying) {
     return (
@@ -58,13 +68,13 @@ export function ProjectMedia({
         key={project.videoSlug}
         className={className}
         aria-label={`${project.name}视频预览`}
-        autoPlay={mode === "card"}
+        autoPlay={false}
         controls={mode === "archive" || mode === "detail"}
-        loop={mode === "card"}
-        muted={mode === "card"}
+        loop={false}
+        muted={false}
         playsInline
         poster={imageSrc}
-        preload={mode === "card" ? "none" : "metadata"}
+        preload="metadata"
       >
         <source src={videoSrc ?? undefined} />
       </video>

@@ -28,8 +28,7 @@ export function ProjectCard({ project, active, onOpen }: ProjectCardProps) {
           <ProjectMedia
             project={project}
             mode="card"
-            previewActive={active}
-            className="h-60 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02] sm:h-72"
+            className="h-60 w-full object-cover transition-transform duration-300 group-hover:scale-[1.01] sm:h-72"
           />
           {project.videoSlug ? (
             <span className="absolute left-4 top-4 rounded-full border border-line bg-[rgba(245,245,235,0.86)] px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-foreground">

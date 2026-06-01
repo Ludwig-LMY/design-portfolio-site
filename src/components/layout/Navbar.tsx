@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -15,7 +14,6 @@ const navItems = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
-  const reduceMotion = useReducedMotion();
 
   return (
     <header className="fixed inset-x-0 top-0 z-40">
@@ -38,10 +36,10 @@ export function Navbar() {
                 href={item.href}
                 className="group relative overflow-hidden text-sm text-[color:rgba(30,33,27,0.84)] transition-colors hover:text-foreground"
               >
-                <span className="block transition-transform duration-300 group-hover:-translate-y-0.5">
+                <span className="block transition-transform duration-200 group-hover:-translate-y-0.5">
                   {item.label}
                 </span>
-                <span className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-foreground transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-foreground transition-transform duration-200 group-hover:scale-x-100" />
               </Link>
             ))}
           </nav>
@@ -58,32 +56,24 @@ export function Navbar() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {open ? (
-          <motion.div
-            initial={reduceMotion ? false : { opacity: 0, y: -12 }}
-            animate={reduceMotion ? {} : { opacity: 1, y: 0 }}
-            exit={reduceMotion ? {} : { opacity: 0, y: -12 }}
-            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="section-shell pt-3 md:hidden"
-          >
-            <div className="glass-panel rounded-[28px] p-4">
-              <nav className="flex flex-col gap-2">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="rounded-2xl px-4 py-3 text-sm text-[color:rgba(30,33,27,0.8)] transition-colors hover:bg-olive-soft hover:text-foreground"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
+      {open ? (
+        <div className="section-shell pt-3 md:hidden">
+          <div className="glass-panel rounded-[28px] p-4">
+            <nav className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-2xl px-4 py-3 text-sm text-[color:rgba(30,33,27,0.8)] transition-colors hover:bg-olive-soft hover:text-foreground"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        </div>
+      ) : null}
     </header>
   );
 }
