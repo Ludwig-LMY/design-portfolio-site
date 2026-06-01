@@ -52,7 +52,7 @@ export function ProjectArchive({ projects }: ProjectArchiveProps) {
               <div className="space-y-5">
                 <div>
                   <p className="text-xs uppercase tracking-[0.24em] text-warm-gray">
-                    我的角色
+                    承担角色
                   </p>
                   <p className="mt-2 text-sm leading-7 text-[color:rgba(30,33,27,0.76)]">
                     {project.role}

@@ -28,7 +28,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
             </h1>
             <p className="body-copy max-w-2xl text-lg sm:text-xl">
               {profile.title}
-              。我主要关注沉浸式场景中的信息传达、交互路径与视觉表达，长期围绕虚拟现实、数字媒体与界面叙事展开实践。
+              。其研究与实践主要围绕沉浸式场景中的信息传达、交互路径与视觉表达展开，长期聚焦虚拟现实、数字媒体与界面叙事。
             </p>
           </RevealText>
 

@@ -60,7 +60,7 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
                       {items[0].name}
                     </h3>
                     <p className="mt-3 text-sm leading-7 text-[color:rgba(30,33,27,0.74)]">
-                      该项目用于集中呈现我在游戏设计方向上的玩法组织、节奏判断与反馈控制能力。
+                      该项目用于集中呈现其在游戏设计方向上的玩法组织、节奏判断与反馈控制能力。
                     </p>
                   </div>
                   <div className="glass-panel rounded-[32px] p-6">
@@ -173,7 +173,7 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
                         <div className="space-y-5">
                           <div>
                             <p className="text-xs uppercase tracking-[0.24em] text-warm-gray">
-                              我的角色
+                              承担角色
                             </p>
                             <p className="mt-2 text-sm leading-7 text-[color:rgba(30,33,27,0.76)]">
                               {project.role}

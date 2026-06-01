@@ -17,10 +17,10 @@ export function Contact({ profile }: ContactProps) {
           <RevealText className="space-y-6">
             <p className="editorial-kicker">Contact / Hiring</p>
             <h2 className="headline-lg max-w-[11ch]">
-              让我们聊聊下一个沉浸式体验项目。
+              欢迎就下一项沉浸式体验项目展开交流。
             </h2>
             <p className="body-copy max-w-2xl">
-              如果你正在寻找一位能够处理虚拟现实、数字媒体与交互表达的设计研究者，我愿意进一步介绍我的项目方法、研究方向与协作方式。
+              如需进一步了解其项目方法、研究方向与协作方式，可通过以下方式取得联系。
             </p>
             <div className="flex flex-wrap gap-4">
               <MagneticButton href={`mailto:${profile.email}`} label="发送邮件" />

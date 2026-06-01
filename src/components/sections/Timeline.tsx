@@ -12,8 +12,8 @@ export function Timeline({ items }: TimelineProps) {
       <SectionTitle
         index="05"
         label="Experience"
-        title="我的经历更像一条持续校准的方法线，而不是简单的职位堆叠。"
-        description="从视觉表达，到 UI UX，再到更完整的产品与体验思考，我逐步建立起一套既能处理细节，也能把控整体方向的工作方式。"
+        title="这段经历更接近一条持续校准的方法线，而不是简单的职位堆叠。"
+        description="从视觉表达，到 UI UX，再到更完整的产品与体验思考，其工作方式逐步形成一套既能处理细节，也能把控整体方向的结构。"
       />
 
       <div className="relative pl-5 sm:pl-8">

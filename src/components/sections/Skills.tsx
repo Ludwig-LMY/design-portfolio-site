@@ -12,8 +12,8 @@ export function Skills({ skillGroups }: SkillsProps) {
       <SectionTitle
         index="04"
         label="Capability"
-        title="方法、能力与工具，是我把审美判断落到结果里的基础设施。"
-        description="我喜欢在感性表达和系统方法之间来回切换。前者决定作品是否被记住，后者决定它能否真正被使用、被复用、被团队承接。"
+        title="方法、能力与工具，共同构成其将审美判断转化为结果的基础设施。"
+        description="这一部分强调感性表达与系统方法之间的并置关系：前者决定作品是否被记住，后者决定其能否被使用、被复用并被团队承接。"
       />
 
       <div className="space-y-5">

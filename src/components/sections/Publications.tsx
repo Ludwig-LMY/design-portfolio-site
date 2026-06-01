@@ -14,8 +14,8 @@ export function Publications({ items }: PublicationsProps) {
       <SectionTitle
         index="06"
         label="Thinking"
-        title="我会记录那些帮助我做出更好判断的方法，而不只记录结果。"
-        description="如果设计作品体现了表达能力，那么写作与思考更接近我的判断方式。它们帮助招聘方更快理解我如何分析问题、如何定义秩序、如何看待高级感。"
+        title="这里记录的不只是结果，也包括形成判断的方法。"
+        description="写作与思考部分用于补充作品之外的方法线索，帮助读者理解其如何分析问题、定义秩序并建立审美判断。"
       />
 
       <div className="grid gap-4">
