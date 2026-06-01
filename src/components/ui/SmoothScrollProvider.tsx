@@ -49,10 +49,10 @@ export function SmoothScrollProvider({
     }
 
     lenis = new Lenis({
-      duration: 1.12,
+      duration: 0.86,
       smoothWheel: true,
       syncTouch: false,
-      wheelMultiplier: 0.9,
+      wheelMultiplier: 0.78,
     });
 
     let frame = 0;

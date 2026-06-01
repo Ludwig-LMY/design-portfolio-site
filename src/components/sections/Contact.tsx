@@ -1,6 +1,7 @@
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { RevealText } from "@/components/ui/RevealText";
 import type { PortfolioProfile } from "@/data/portfolio";
+import { withBasePath } from "@/lib/base-path";
 
 type ContactProps = {
   profile: PortfolioProfile;
@@ -8,7 +9,10 @@ type ContactProps = {
 
 export function Contact({ profile }: ContactProps) {
   return (
-    <section id="contact" className="section-shell pb-12 pt-18 sm:pb-14 sm:pt-20 lg:pb-16 lg:pt-24">
+    <section
+      id="contact"
+      className="section-shell pb-12 pt-18 sm:pb-14 sm:pt-20 lg:pb-16 lg:pt-24"
+    >
       <div className="glass-panel rounded-[40px] px-6 py-10 sm:px-8 sm:py-12 lg:px-12 lg:py-14">
         <div className="grid gap-10 xl:grid-cols-[minmax(0,0.7fr)_minmax(300px,0.3fr)]">
           <RevealText className="space-y-6">
@@ -22,18 +26,19 @@ export function Contact({ profile }: ContactProps) {
             <div className="flex flex-wrap gap-4">
               <MagneticButton href={`mailto:${profile.email}`} label="发送邮件" />
               <MagneticButton
-                href={profile.pdfHref}
+                href={withBasePath(profile.pdfHref)}
                 label="下载作品集 PDF"
                 variant="secondary"
               />
             </div>
           </RevealText>
 
-          <RevealText delay={0.1} className="grid gap-5 rounded-[32px] border border-line bg-white/36 p-6">
+          <RevealText
+            delay={0.1}
+            className="grid gap-5 rounded-[32px] border border-line bg-white/36 p-6"
+          >
             <div>
-              <p className="text-xs uppercase tracking-[0.26em] text-warm-gray">
-                邮箱
-              </p>
+              <p className="text-xs uppercase tracking-[0.26em] text-warm-gray">邮箱</p>
               <a
                 href={`mailto:${profile.email}`}
                 className="mt-2 block text-lg font-medium tracking-[-0.04em]"
@@ -42,9 +47,7 @@ export function Contact({ profile }: ContactProps) {
               </a>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.26em] text-warm-gray">
-                电话
-              </p>
+              <p className="text-xs uppercase tracking-[0.26em] text-warm-gray">电话</p>
               <a
                 href={`tel:${profile.phone}`}
                 className="mt-2 block text-lg font-medium tracking-[-0.04em]"
@@ -53,9 +56,7 @@ export function Contact({ profile }: ContactProps) {
               </a>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.26em] text-warm-gray">
-                微信
-              </p>
+              <p className="text-xs uppercase tracking-[0.26em] text-warm-gray">微信</p>
               <p className="mt-2 text-lg font-medium tracking-[-0.04em]">
                 {profile.wechat}
               </p>
