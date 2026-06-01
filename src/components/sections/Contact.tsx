@@ -1,7 +1,6 @@
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { RevealText } from "@/components/ui/RevealText";
 import type { PortfolioProfile } from "@/data/portfolio";
-import { withBasePath } from "@/lib/base-path";
 
 type ContactProps = {
   profile: PortfolioProfile;
@@ -25,11 +24,6 @@ export function Contact({ profile }: ContactProps) {
             </p>
             <div className="flex flex-wrap gap-4">
               <MagneticButton href={`mailto:${profile.email}`} label="发送邮件" />
-              <MagneticButton
-                href={withBasePath(profile.pdfHref)}
-                label="下载作品集 PDF"
-                variant="secondary"
-              />
             </div>
           </RevealText>
 
