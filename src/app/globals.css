@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f5eb;
+  --foreground: #1e211b;
+  --paper: #f5f5eb;
+  --olive: #51733f;
+  --olive-soft: rgba(81, 115, 63, 0.14);
+  --warm-gray: #a7a391;
+  --line: rgba(30, 33, 27, 0.12);
+  --surface: rgba(255, 255, 255, 0.42);
+  --surface-strong: rgba(255, 255, 255, 0.58);
+  --shadow: 0 22px 70px rgba(38, 46, 30, 0.11);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-olive: var(--olive);
+  --color-olive-soft: var(--olive-soft);
+  --color-warm-gray: var(--warm-gray);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --font-sans: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", "Inter",
+    "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", "JetBrains Mono", "Menlo", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  background-image:
+    radial-gradient(circle at top left, rgba(81, 115, 63, 0.07), transparent 28%),
+    radial-gradient(circle at 80% 15%, rgba(167, 163, 145, 0.16), transparent 24%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0));
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: #f5f5eb;
+  background: rgba(81, 115, 63, 0.88);
+}
+
+.site-shell {
+  position: relative;
+}
+
+.site-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, transparent calc(8.333% - 1px), var(--line) calc(8.333% - 1px), var(--line) 8.333%, transparent 8.333%),
+    linear-gradient(to bottom, transparent calc(100% - 1px), var(--line) calc(100% - 1px));
+  background-size: calc(100% / 12) 100%, 100% 1px;
+  opacity: 0.3;
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 8%, rgba(0, 0, 0, 0.5) 92%, transparent 100%);
+}
+
+.section-shell {
+  @apply relative mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12;
+}
+
+.section-space {
+  @apply py-20 sm:py-24 lg:py-32;
+}
+
+.glass-panel {
+  @apply border border-line bg-surface backdrop-blur-xl;
+  box-shadow: var(--shadow);
+}
+
+.editorial-kicker {
+  @apply text-[11px] font-medium uppercase tracking-[0.32em] text-olive;
+}
+
+.body-copy {
+  @apply text-[15px] leading-8 text-[color:rgba(30,33,27,0.76)] sm:text-base;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.headline-xl {
+  font-size: clamp(3.25rem, 8.2vw, 7.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.headline-lg {
+  font-size: clamp(2.4rem, 5.5vw, 4.9rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.headline-md {
+  font-size: clamp(1.75rem, 3vw, 2.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.faint-rule {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--line) 10%,
+    var(--line) 90%,
+    transparent 100%
+  );
+}
+
+.lift-hover {
+  transition:
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 360ms ease,
+    border-color 360ms ease;
+}
+
+.lift-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 80px rgba(38, 46, 30, 0.15);
+}
+
+.grain-mask::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.02)
+  );
+  mix-blend-mode: soft-light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
