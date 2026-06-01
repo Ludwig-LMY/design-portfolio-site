@@ -2,7 +2,6 @@ import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
 import { ProjectGroups } from "@/components/sections/ProjectGroups";
-import { Projects } from "@/components/sections/Projects";
 import { Publications } from "@/components/sections/Publications";
 import { Skills } from "@/components/sections/Skills";
 import { Timeline } from "@/components/sections/Timeline";
@@ -14,10 +13,6 @@ export default function Home() {
     <Layout>
       <Hero
         profile={portfolioData.profile}
-        categories={portfolioData.categories}
-        projects={portfolioData.projects}
-      />
-      <Projects
         categories={portfolioData.categories}
         projects={portfolioData.projects}
       />

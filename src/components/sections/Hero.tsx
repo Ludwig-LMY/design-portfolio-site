@@ -34,8 +34,8 @@ export function Hero({ profile, categories, projects }: HeroProps) {
 
           <RevealText>
             <div className="flex flex-wrap items-center gap-4">
-              <MagneticButton href="#projects" label="查看作品" />
-              <MagneticButton href="#projects" label="查看目录" variant="secondary" />
+              <MagneticButton href="#virtual-exhibitions" label="查看作品" />
+              <MagneticButton href="#contact" label="联系" variant="secondary" />
             </div>
           </RevealText>
 
