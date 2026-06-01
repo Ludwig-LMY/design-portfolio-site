@@ -19,7 +19,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
       id="top"
       className="section-shell relative flex min-h-screen items-end pt-28 sm:pt-32 lg:pt-36"
     >
-      <div className="section-space grid w-full gap-12 lg:grid-cols-[minmax(0,1.08fr)_minmax(390px,0.92fr)] lg:items-end">
+      <div className="section-space grid w-full gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(480px,1.08fr)] lg:items-end">
         <div className="relative z-10 space-y-10">
           <RevealText className="space-y-6">
             <p className="editorial-kicker">个人作品集 / Portfolio 2026</p>
@@ -58,7 +58,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
         </div>
 
         <div className="relative z-10">
-          <div className="relative overflow-hidden rounded-[36px] border border-line bg-[linear-gradient(160deg,rgba(255,255,255,0.58),rgba(255,255,255,0.26))] p-5 sm:min-h-[460px] sm:p-7">
+          <div className="relative overflow-hidden rounded-[36px] border border-line bg-[linear-gradient(160deg,rgba(255,255,255,0.58),rgba(255,255,255,0.26))] p-5 sm:min-h-[540px] sm:p-7">
             <div className="absolute inset-0 opacity-55">
               <div className="absolute inset-x-[8%] top-[12%] h-[32%] rounded-full bg-[radial-gradient(circle,rgba(81,115,63,0.18),transparent_68%)] blur-2xl" />
               <div className="absolute right-[10%] top-[16%] h-64 w-64 rotate-[18deg] rounded-[48%] border border-[rgba(30,33,27,0.18)]" />
@@ -76,7 +76,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
                 </div>
               </div>
 
-              <div className="grid gap-4 lg:grid-cols-[1.02fr_0.98fr]">
+              <div className="grid flex-1 gap-4 lg:grid-cols-[0.9fr_1.1fr]">
                 <div className="rounded-[28px] border border-line bg-white/56 p-5 sm:p-6">
                   <p className="text-xs uppercase tracking-[0.28em] text-warm-gray">
                     Research Positioning
@@ -88,19 +88,19 @@ export function Hero({ profile, categories, projects }: HeroProps) {
                   </p>
                 </div>
 
-                <div className="space-y-3 rounded-[28px] border border-line bg-[rgba(81,115,63,0.08)] p-5 sm:p-6">
+                <div className="space-y-4 rounded-[28px] border border-line bg-[rgba(81,115,63,0.08)] p-5 sm:p-6">
                   <p className="text-xs uppercase tracking-[0.28em] text-warm-gray">
-                    Category Directory
+                    作品目录
                   </p>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {categories.map((category) => (
                       <a
                         key={category.id}
                         href={`#${category.id}`}
-                        className="flex items-center justify-between rounded-[18px] border border-[rgba(30,33,27,0.08)] bg-white/38 px-4 py-3 transition-colors duration-200 hover:bg-white/60"
+                        className="flex items-center justify-between rounded-[20px] border border-[rgba(30,33,27,0.08)] bg-white/38 px-5 py-4 transition-colors duration-200 hover:bg-white/60"
                       >
                         <div className="min-w-0">
-                          <p className="text-sm font-medium tracking-[-0.03em] text-foreground">
+                          <p className="text-base font-medium tracking-[-0.03em] text-foreground">
                             {category.title}
                           </p>
                           <p className="mt-1 text-xs uppercase tracking-[0.24em] text-warm-gray">
@@ -117,7 +117,16 @@ export function Hero({ profile, categories, projects }: HeroProps) {
               </div>
 
               <div className="rounded-[28px] border border-line bg-white/40 px-5 py-4 text-sm leading-7 text-[color:rgba(30,33,27,0.72)] sm:px-6">
-                目录按你实际整理的分类组织：虚拟展馆、VR作品、获奖游戏、获奖影片。后续浏览路径会围绕这四类展开，而不是把所有项目堆成一条长列表。
+                以上内容仅为已整理作品中的节选。若需查看更完整的虚拟现实作品目录与演示文件，可通过
+                <a
+                  href={profile.archiveHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mx-1 font-medium text-olive underline underline-offset-4"
+                >
+                  百度网盘链接
+                </a>
+                获取，提取码：{profile.archiveCode}。
               </div>
             </div>
           </div>

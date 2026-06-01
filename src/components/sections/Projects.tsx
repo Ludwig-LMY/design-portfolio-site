@@ -11,9 +11,9 @@ export function Projects({ categories, projects }: ProjectsProps) {
     <section id="projects" className="section-shell section-space">
       <SectionTitle
         index="01"
-        label="Project Overview"
-        title="按类别展开作品，而不是按形式堆叠。"
-        description="这一部分先给出总览目录，后面的内容会按你已经整理好的类别分别呈现。每个分类使用不同的叙事方式和版式节奏，避免浏览时产生重复感。"
+        label="Work Catalogue"
+        title="作品目录"
+        description="以下目录按照既有整理方式分为虚拟展馆、VR作品、获奖游戏与获奖影片四个部分，用于呈现目前已编排入站的代表性作品。"
       />
 
       <div className="grid gap-5 lg:grid-cols-2">
@@ -36,7 +36,7 @@ export function Projects({ categories, projects }: ProjectsProps) {
                       {String(index + 1).padStart(2, "0")} / {category.english}
                     </p>
                     <span className="rounded-full border border-line px-3 py-1 text-xs text-[color:rgba(30,33,27,0.72)]">
-                      {count} 项作品
+                      {count} 项
                     </span>
                   </div>
                   <h3 className="text-[clamp(2rem,3vw,3rem)] font-semibold tracking-[-0.05em] text-balance">

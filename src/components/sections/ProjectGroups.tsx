@@ -43,7 +43,7 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
             />
 
             {isGame ? (
-              <div className="grid gap-6 xl:grid-cols-[minmax(0,0.62fr)_minmax(320px,0.38fr)]">
+              <div className="grid gap-6 xl:grid-cols-[minmax(0,0.68fr)_minmax(300px,0.32fr)]">
                 <div className="glass-panel rounded-[36px] p-5 sm:p-7">
                   <div className="overflow-hidden rounded-[28px] border border-line bg-[rgba(81,115,63,0.04)]">
                     <ProjectMedia
@@ -56,8 +56,12 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
                 <div className="space-y-6">
                   <div className="glass-panel rounded-[32px] p-6 sm:p-7">
                     {renderMeta(items[0])}
-                    <h3 className="mt-5 headline-lg max-w-[10ch]">{items[0].name}</h3>
-                    <p className="mt-5 body-copy">{items[0].intro}</p>
+                    <h3 className="mt-5 text-[clamp(1.9rem,3vw,3rem)] font-semibold tracking-[-0.05em]">
+                      {items[0].name}
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-[color:rgba(30,33,27,0.74)]">
+                      该项目主要用于呈现我在游戏设计方向上的玩法组织、节奏判断与战斗反馈控制能力。
+                    </p>
                   </div>
                   <div className="glass-panel rounded-[32px] p-6">
                     <p className="editorial-kicker">Game Design Focus</p>
@@ -71,22 +75,19 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
                     </ul>
                   </div>
                 </div>
-                <div className="xl:col-span-2 grid gap-5">
-                  {items[0].detailSections.map((section, sectionIndex) => (
-                    <div
-                      key={section.heading}
-                      className={`glass-panel rounded-[30px] p-6 sm:p-7 ${
-                        sectionIndex % 2 === 0
-                          ? "lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-6"
-                          : ""
-                      }`}
-                    >
-                      <p className="text-sm uppercase tracking-[0.26em] text-warm-gray">
-                        {section.heading}
-                      </p>
-                      <p className="mt-4 body-copy lg:mt-0">{section.body}</p>
-                    </div>
-                  ))}
+                <div className="xl:col-span-2 grid gap-5 md:grid-cols-3">
+                  <div className="glass-panel rounded-[30px] p-6 sm:p-7">
+                    <p className="text-sm uppercase tracking-[0.26em] text-warm-gray">项目定位</p>
+                    <p className="mt-4 body-copy">以完整实机演示为主，集中呈现玩法循环、推进逻辑与交互反馈。</p>
+                  </div>
+                  <div className="glass-panel rounded-[30px] p-6 sm:p-7">
+                    <p className="text-sm uppercase tracking-[0.26em] text-warm-gray">我的角色</p>
+                    <p className="mt-4 body-copy">{items[0].role}</p>
+                  </div>
+                  <div className="glass-panel rounded-[30px] p-6 sm:p-7">
+                    <p className="text-sm uppercase tracking-[0.26em] text-warm-gray">设计重点</p>
+                    <p className="mt-4 body-copy">{items[0].challenge}</p>
+                  </div>
                 </div>
               </div>
             ) : isFilm ? (
@@ -138,7 +139,7 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
                 <div className="glass-panel rounded-[34px] p-6 sm:p-7">
                   <p className="editorial-kicker">Category Note</p>
                   <p className="mt-5 text-[clamp(1.6rem,2.4vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.05em]">
-                    先建立方向感，再建立历史理解。
+                    先建立方向感，再形成内容理解。
                   </p>
                   <p className="mt-5 body-copy">{category.note}</p>
                 </div>
