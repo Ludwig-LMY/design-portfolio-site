@@ -11,9 +11,9 @@ export function Projects({ categories, projects }: ProjectsProps) {
     <section id="projects" className="section-shell section-space">
       <SectionTitle
         index="01"
-        label="Work Catalogue"
+        label="作品目录"
         title="作品目录"
-        description="以下目录按照既有整理方式分为虚拟展馆、VR作品、获奖游戏与获奖影片四个部分，用于呈现目前已编排入站的代表性作品。"
+        description="以下目录依照现有归档结构分为虚拟展馆、VR作品、获奖游戏与获奖影片四类，用于呈现本站当前收录的代表性作品。"
       />
 
       <div className="grid gap-5 lg:grid-cols-2">

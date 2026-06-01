@@ -56,15 +56,15 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
                 <div className="space-y-6">
                   <div className="glass-panel rounded-[32px] p-6 sm:p-7">
                     {renderMeta(items[0])}
-                    <h3 className="mt-5 text-[clamp(1.9rem,3vw,3rem)] font-semibold tracking-[-0.05em]">
+                    <h3 className="mt-5 text-[clamp(1.6rem,2.3vw,2.3rem)] font-semibold tracking-[-0.05em]">
                       {items[0].name}
                     </h3>
-                    <p className="mt-4 text-sm leading-7 text-[color:rgba(30,33,27,0.74)]">
-                      该项目主要用于呈现我在游戏设计方向上的玩法组织、节奏判断与战斗反馈控制能力。
+                    <p className="mt-3 text-sm leading-7 text-[color:rgba(30,33,27,0.74)]">
+                      该项目用于集中呈现我在游戏设计方向上的玩法组织、节奏判断与反馈控制能力。
                     </p>
                   </div>
                   <div className="glass-panel rounded-[32px] p-6">
-                    <p className="editorial-kicker">Game Design Focus</p>
+                    <p className="editorial-kicker">设计要点</p>
                     <ul className="mt-5 space-y-4 text-sm leading-7 text-[color:rgba(30,33,27,0.78)]">
                       {items[0].keyScreens.map((item) => (
                         <li key={item} className="flex gap-3">
@@ -78,15 +78,17 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
                 <div className="xl:col-span-2 grid gap-5 md:grid-cols-3">
                   <div className="glass-panel rounded-[30px] p-6 sm:p-7">
                     <p className="text-sm uppercase tracking-[0.26em] text-warm-gray">项目定位</p>
-                    <p className="mt-4 body-copy">以完整实机演示为主，集中呈现玩法循环、推进逻辑与交互反馈。</p>
+                    <p className="mt-4 text-sm leading-7 text-[color:rgba(30,33,27,0.76)]">
+                      以完整实机演示为主体，重点呈现玩法循环、推进逻辑与交互反馈。
+                    </p>
                   </div>
                   <div className="glass-panel rounded-[30px] p-6 sm:p-7">
-                    <p className="text-sm uppercase tracking-[0.26em] text-warm-gray">我的角色</p>
-                    <p className="mt-4 body-copy">{items[0].role}</p>
+                    <p className="text-sm uppercase tracking-[0.26em] text-warm-gray">承担内容</p>
+                    <p className="mt-4 text-sm leading-7 text-[color:rgba(30,33,27,0.76)]">{items[0].role}</p>
                   </div>
                   <div className="glass-panel rounded-[30px] p-6 sm:p-7">
-                    <p className="text-sm uppercase tracking-[0.26em] text-warm-gray">设计重点</p>
-                    <p className="mt-4 body-copy">{items[0].challenge}</p>
+                    <p className="text-sm uppercase tracking-[0.26em] text-warm-gray">设计说明</p>
+                    <p className="mt-4 text-sm leading-7 text-[color:rgba(30,33,27,0.76)]">{items[0].challenge}</p>
                   </div>
                 </div>
               </div>
@@ -137,9 +139,9 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
             ) : isVirtual ? (
               <div className="grid gap-6 xl:grid-cols-[320px_minmax(0,1fr)]">
                 <div className="glass-panel rounded-[34px] p-6 sm:p-7">
-                  <p className="editorial-kicker">Category Note</p>
+                  <p className="editorial-kicker">目录说明</p>
                   <p className="mt-5 text-[clamp(1.6rem,2.4vw,2.5rem)] font-semibold leading-[1.15] tracking-[-0.05em]">
-                    先建立方向感，再形成内容理解。
+                    先建立观看秩序，再进入内容理解。
                   </p>
                   <p className="mt-5 body-copy">{category.note}</p>
                 </div>

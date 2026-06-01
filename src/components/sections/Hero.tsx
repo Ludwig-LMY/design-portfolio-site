@@ -19,7 +19,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
       id="top"
       className="section-shell relative flex min-h-screen items-end pt-28 sm:pt-32 lg:pt-36"
     >
-      <div className="section-space grid w-full gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(480px,1.08fr)] lg:items-end">
+      <div className="section-space grid w-full gap-12 lg:grid-cols-[minmax(0,0.84fr)_minmax(560px,1.16fr)] lg:items-end">
         <div className="relative z-10 space-y-10">
           <RevealText className="space-y-6">
             <p className="editorial-kicker">个人作品集 / Portfolio 2026</p>
@@ -35,7 +35,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
           <RevealText>
             <div className="flex flex-wrap items-center gap-4">
               <MagneticButton href="#projects" label="查看作品" />
-              <MagneticButton href="#virtual-exhibitions" label="进入目录" variant="secondary" />
+              <MagneticButton href="#projects" label="查看目录" variant="secondary" />
             </div>
           </RevealText>
 
@@ -76,7 +76,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
                 </div>
               </div>
 
-              <div className="grid flex-1 gap-4 lg:grid-cols-[0.9fr_1.1fr]">
+              <div className="grid flex-1 gap-4 lg:grid-cols-[0.72fr_1.28fr]">
                 <div className="rounded-[28px] border border-line bg-white/56 p-5 sm:p-6">
                   <p className="text-xs uppercase tracking-[0.28em] text-warm-gray">
                     Research Positioning
@@ -89,7 +89,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
                 </div>
 
                 <div className="space-y-4 rounded-[28px] border border-line bg-[rgba(81,115,63,0.08)] p-5 sm:p-6">
-                  <p className="text-xs uppercase tracking-[0.28em] text-warm-gray">
+                  <p className="text-xs tracking-[0.28em] text-warm-gray">
                     作品目录
                   </p>
                   <div className="space-y-4">
@@ -103,7 +103,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
                           <p className="text-base font-medium tracking-[-0.03em] text-foreground">
                             {category.title}
                           </p>
-                          <p className="mt-1 text-xs uppercase tracking-[0.24em] text-warm-gray">
+                          <p className="mt-1 text-xs uppercase tracking-[0.22em] text-warm-gray">
                             {category.english}
                           </p>
                         </div>
@@ -117,7 +117,7 @@ export function Hero({ profile, categories, projects }: HeroProps) {
               </div>
 
               <div className="rounded-[28px] border border-line bg-white/40 px-5 py-4 text-sm leading-7 text-[color:rgba(30,33,27,0.72)] sm:px-6">
-                以上内容仅为已整理作品中的节选。若需查看更完整的虚拟现实作品目录与演示文件，可通过
+                本站所列内容仅为现阶段已整理并编入页面的代表性作品。若需查看更完整的虚拟现实作品目录与演示文件，可通过
                 <a
                   href={profile.archiveHref}
                   target="_blank"

@@ -89,7 +89,7 @@ export const portfolioData = {
       title: "虚拟展馆",
       english: "Virtual Exhibitions",
       description: "围绕历史叙事、数字纪念与空间导览展开的沉浸式展馆项目。",
-      note: "此类作品的重点并不在于复制线下场馆形态，而在于重建观众理解内容的顺序、停留层级与浏览节奏。",
+      note: "此类作品的核心并不在于对线下场馆形态的直接复刻，而在于重新组织观众理解内容的次序、停留节点与观看节律。",
       tags: ["历史叙事", "空间导览", "数字纪念"],
     },
     {
@@ -97,7 +97,7 @@ export const portfolioData = {
       title: "VR作品",
       english: "VR Works",
       description: "包含仿真训练、工业展示、教学演示与空间化信息表达的虚拟现实作品。",
-      note: "该部分更关注虚拟现实场景中的方向感、操作反馈与认知层级，而非单纯的模型搭建与氛围营造。",
+      note: "该部分更关注虚拟现实场景中的方向建立、操作反馈与认知层级，而非停留于模型搭建或氛围渲染本身。",
       tags: ["仿真训练", "工业展示", "教学演示"],
     },
     {
@@ -105,7 +105,7 @@ export const portfolioData = {
       title: "获奖游戏",
       english: "Award-winning Game",
       description: "以玩法循环、战斗反馈和关卡节奏为核心的游戏设计作品。",
-      note: "游戏部分主要呈现机制设计、反馈判断与完整体验编排能力，是我在游戏设计方向上的集中表达。",
+      note: "游戏部分主要呈现机制组织、反馈判断与整体体验编排能力，用以集中说明我在游戏设计方向上的方法与判断。",
       tags: ["玩法循环", "关卡节奏", "战斗反馈"],
     },
     {
@@ -113,7 +113,7 @@ export const portfolioData = {
       title: "获奖影片",
       english: "Award-winning Films",
       description: "涵盖影像、动画与文化表达的获奖短片作品。",
-      note: "该部分更强调情绪、节奏与视觉语言如何共同服务叙事，而非仅停留于风格层面的呈现。",
+      note: "该部分更强调情绪、节奏与视觉语言如何共同服务叙事，而非仅停留于风格层面的展示。",
       tags: ["影像叙事", "动画表达", "文化气质"],
     },
   ] satisfies ProjectCategory[],
