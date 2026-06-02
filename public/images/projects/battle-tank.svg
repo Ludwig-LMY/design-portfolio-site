@@ -1,24 +1,59 @@
 <svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="800" fill="#F5F5EB"/>
-  <rect x="80" y="92" width="1040" height="616" rx="36" fill="url(#bg)"/>
-  <rect x="120" y="132" width="240" height="52" rx="26" fill="rgba(255,255,255,0.62)"/>
-  <text x="152" y="165" fill="#51733F" font-family="PingFang SC, Noto Sans SC, Arial" font-size="20" letter-spacing="4">GAME DESIGN</text>
-  <rect x="120" y="228" width="960" height="388" rx="28" fill="rgba(255,255,255,0.44)" stroke="rgba(30,33,27,0.12)"/>
-  <text x="152" y="322" fill="#1E211B" font-family="PingFang SC, Noto Sans SC, Arial" font-size="74" font-weight="600">BattleTank</text>
-  <text x="152" y="384" fill="#1E211B" font-family="PingFang SC, Noto Sans SC, Arial" font-size="28">获奖游戏 / Unity 3D / 坦克对战 / 关卡推进</text>
-  <text x="152" y="458" fill="#5B6252" font-family="PingFang SC, Noto Sans SC, Arial" font-size="24">体现玩法设计、战斗反馈、目标循环与游戏体验节奏控制</text>
-  <circle cx="910" cy="404" r="112" fill="rgba(81,115,63,0.12)" stroke="rgba(81,115,63,0.32)"/>
-  <rect x="858" y="378" width="156" height="42" rx="16" fill="#51733F"/>
-  <rect x="930" y="338" width="102" height="28" rx="14" fill="#51733F"/>
-  <rect x="834" y="420" width="236" height="32" rx="16" fill="#384F2A"/>
-  <circle cx="878" cy="472" r="26" fill="#1E211B"/>
-  <circle cx="1018" cy="472" r="26" fill="#1E211B"/>
-  <circle cx="878" cy="472" r="12" fill="#A7A391"/>
-  <circle cx="1018" cy="472" r="12" fill="#A7A391"/>
+  <rect width="1200" height="800" fill="#F2F2DE"/>
+  <rect x="72" y="72" width="1056" height="656" rx="42" fill="url(#panel)"/>
+  <rect x="112" y="112" width="248" height="54" rx="27" fill="#F8F8EF" fill-opacity="0.92"/>
+  <text x="148" y="146" fill="#51733F" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, Arial" font-size="20" letter-spacing="4">GAME DESIGN</text>
+
+  <rect x="112" y="210" width="976" height="474" rx="34" fill="#FCFCF5" fill-opacity="0.68" stroke="rgba(30,33,27,0.12)"/>
+
+  <text x="150" y="306" fill="#1E211B" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, Arial" font-size="76" font-weight="700">BattleTank</text>
+  <text x="150" y="368" fill="#2D3327" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, Arial" font-size="28">获奖游戏 / Unity 3D / 坦克对战 / 关卡推进</text>
+  <text x="150" y="448" fill="#5B6252" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, Arial" font-size="24">体现玩法设计、战斗反馈、目标循环与游戏体验节奏控制</text>
+
+  <g transform="translate(720 198)">
+    <path d="M205 20L254 64L334 44L352 110L424 120L392 188L428 254L362 276L350 340L274 320L224 366L176 322L95 342L80 276L12 246L48 182L18 122L90 108L104 42L186 64L205 20Z" fill="#D34A28" stroke="#A2301A" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M222 44L254 76L316 62L330 116L392 124L364 178L390 232L336 250L326 302L266 286L228 324L190 286L128 302L114 250L58 224L90 174L64 120L122 108L136 56L198 72L222 44Z" fill="#F49B12"/>
+
+    <g fill="#C89452" stroke="#6B4E2E" stroke-width="6">
+      <path d="M215 76C288 58 352 92 366 152C380 214 340 272 260 284C182 296 122 252 108 190C94 130 136 88 215 76Z"/>
+      <path d="M110 136C154 118 190 134 198 170C206 204 180 236 140 242C100 248 68 224 60 192C52 160 72 138 110 136Z"/>
+      <path d="M318 136C358 126 392 144 402 176C412 210 390 240 354 246C318 252 286 232 278 198C270 164 284 144 318 136Z"/>
+      <path d="M70 54C98 50 124 68 130 96C136 124 122 148 94 152C66 156 42 138 36 110C30 82 42 58 70 54Z"/>
+      <path d="M336 42C366 38 392 56 400 86C408 116 394 142 364 148C334 154 306 138 300 108C294 78 308 46 336 42Z"/>
+      <path d="M36 258C62 254 88 272 94 298C100 324 82 348 54 352C26 356 4 338 -2 310C-8 282 8 262 36 258Z"/>
+      <path d="M368 270C398 266 424 286 430 316C436 346 418 372 386 376C354 380 326 360 320 330C314 300 336 274 368 270Z"/>
+      <path d="M184 302C214 294 244 306 252 332C260 358 244 384 214 390C184 396 156 382 148 356C140 330 154 310 184 302Z"/>
+    </g>
+
+    <g opacity="0.2" fill="#6B4E2E">
+      <circle cx="116" cy="114" r="6"/>
+      <circle cx="156" cy="202" r="5"/>
+      <circle cx="312" cy="188" r="7"/>
+      <circle cx="360" cy="94" r="5"/>
+      <circle cx="242" cy="336" r="6"/>
+      <circle cx="58" cy="304" r="5"/>
+    </g>
+
+    <g transform="translate(118 62)">
+      <path d="M74 0H170C188 0 202 14 202 32V180C202 198 188 212 170 212H74C56 212 42 198 42 180V32C42 14 56 0 74 0Z" fill="#6EBA2E" stroke="#25461A" stroke-width="8"/>
+      <path d="M52 126H192V306H52V126Z" fill="#65AA27" stroke="#25461A" stroke-width="8"/>
+      <path d="M92 22H152C160 22 166 28 166 36V62C166 70 160 76 152 76H92C84 76 78 70 78 62V36C78 28 84 22 92 22Z" fill="#5B8D2A" stroke="#25461A" stroke-width="6"/>
+      <path d="M104 200H140L148 248H96L104 200Z" fill="#B07A43"/>
+      <path d="M110 86H134C148 86 160 98 160 112V128H84V112C84 98 96 86 110 86Z" fill="#4C7D21" stroke="#25461A" stroke-width="6"/>
+      <rect x="20" y="146" width="24" height="126" rx="8" fill="#29461F" stroke="#172912" stroke-width="6"/>
+      <rect x="200" y="146" width="24" height="126" rx="8" fill="#29461F" stroke="#172912" stroke-width="6"/>
+      <path d="M32 160V258" stroke="#172912" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 10"/>
+      <path d="M212 160V258" stroke="#172912" stroke-width="4" stroke-linecap="round" stroke-dasharray="12 10"/>
+      <path d="M70 154H174" stroke="#8FD145" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+      <path d="M82 106H118" stroke="#8FD145" stroke-width="8" stroke-linecap="round" opacity="0.72"/>
+      <path d="M150 154H174" stroke="#A6E362" stroke-width="8" stroke-linecap="round" opacity="0.68"/>
+    </g>
+  </g>
+
   <defs>
-    <linearGradient id="bg" x1="120" y1="132" x2="1040" y2="708" gradientUnits="userSpaceOnUse">
-      <stop stop-color="rgba(255,255,255,0.68)"/>
-      <stop offset="1" stop-color="rgba(81,115,63,0.16)"/>
+    <linearGradient id="panel" x1="120" y1="102" x2="1056" y2="728" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3DE"/>
+      <stop offset="1" stop-color="#DCE1C8"/>
     </linearGradient>
   </defs>
 </svg>
