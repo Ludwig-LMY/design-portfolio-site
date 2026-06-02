@@ -6,8 +6,6 @@ import { useState } from "react";
 
 const navItems = [
   { href: "#virtual-exhibitions", label: "作品" },
-  { href: "#about", label: "关于" },
-  { href: "#timeline", label: "经历" },
   { href: "#skills", label: "方法" },
   { href: "#contact", label: "联系" },
 ];
