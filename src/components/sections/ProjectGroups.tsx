@@ -20,6 +20,7 @@ function renderMeta(project: Project) {
 export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
   const byCategory = (categoryId: string) =>
     projects.filter((project) => project.categoryId === categoryId);
+  const featuredVrProjectId = "mr-shooting";
 
   return (
     <>
@@ -28,6 +29,7 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
         const isGame = category.id === "award-game";
         const isFilm = category.id === "award-films";
         const isVirtual = category.id === "virtual-exhibitions";
+        const isVrWorks = category.id === "vr-works";
 
         return (
           <section
@@ -192,6 +194,78 @@ export function ProjectGroups({ categories, projects }: ProjectGroupsProps) {
                     </article>
                   ))}
                 </div>
+              </div>
+            ) : isVrWorks ? (
+              <div className="grid gap-6 lg:grid-cols-2">
+                {items.map((project) => {
+                  const isFeatured = project.id === featuredVrProjectId;
+
+                  return (
+                    <article
+                      key={project.id}
+                      id={`${project.id}-archive`}
+                      className={`glass-panel rounded-[32px] p-5 sm:p-6 ${
+                        isFeatured ? "lg:col-span-2" : ""
+                      }`}
+                    >
+                      <div
+                        className={`grid gap-6 ${
+                          isFeatured
+                            ? "xl:grid-cols-[minmax(0,0.58fr)_minmax(320px,0.42fr)] xl:items-end"
+                            : "grid-rows-[auto_1fr]"
+                        }`}
+                      >
+                        <div className="overflow-hidden rounded-[26px] border border-line bg-[rgba(81,115,63,0.05)]">
+                          <ProjectMedia
+                            project={project}
+                            mode="archive"
+                            className={`w-full object-cover ${
+                              isFeatured
+                                ? "aspect-[16/9] min-h-[360px]"
+                                : "aspect-[16/10] min-h-[260px]"
+                            }`}
+                          />
+                        </div>
+
+                        <div
+                          className={`space-y-4 ${
+                            isFeatured ? "xl:max-w-[34rem]" : "flex flex-col justify-between"
+                          }`}
+                        >
+                          <div className="space-y-4">
+                            {renderMeta(project)}
+                            <h3
+                              className={`font-semibold tracking-[-0.05em] text-balance ${
+                                isFeatured
+                                  ? "text-[clamp(2.2rem,3.2vw,3.5rem)]"
+                                  : "text-[clamp(1.65rem,2.2vw,2.35rem)]"
+                              }`}
+                            >
+                              {project.name}
+                            </h3>
+                            <p className={`${isFeatured ? "body-copy text-[17px]" : "body-copy"}`}>
+                              {project.summary}
+                            </p>
+                            <p className="text-sm leading-7 text-[color:rgba(30,33,27,0.72)]">
+                              {project.challenge}
+                            </p>
+                          </div>
+
+                          <div className="flex flex-wrap gap-2 pt-2">
+                            {project.tags.slice(0, 3).map((tag) => (
+                              <span
+                                key={tag}
+                                className="rounded-full border border-line bg-white/36 px-3 py-1 text-xs text-[color:rgba(30,33,27,0.66)]"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             ) : (
               <div className="grid gap-5 lg:grid-cols-12">
